@@ -32,6 +32,11 @@ ul,dl{
     font-size: 18px;
 }
 
+.span {
+    font-weight: bold;
+    font-style: italic;
+}
+
 #footer {
     padding: 5px;
     color: #f4f6fd;
