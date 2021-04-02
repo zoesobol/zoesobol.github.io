@@ -1,0 +1,129 @@
+body {
+    align-items: center;
+    justify-content: center;
+    font-family: 'Montserrat', sans-serif;
+    padding: 30px;
+}
+
+
+
+.cont {
+    border: 1px solid black;
+    text-align: center;
+}
+
+.picture {
+    padding: 2em;
+    background: #353535;
+    position: relative;
+}
+
+/*
+.picture:before {
+    content: '';
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    width: auto;
+    height: 0;
+    top:100%;
+    border-left: 13.7em solid #353535;
+    border-top: 13.7em solid transparent;
+    border-bottom: 13.7em solid transparent;
+    transform: rotate(90deg);
+}*/
+
+.hexagono{
+    position: relative;
+    display: block;
+    background-color: #28AFFA;
+    width: $hw*1px;
+    height: $wh;
+    z-index: 999;
+
+    transition: all .5s ease-out;
+    &:hover{
+      transform: scale(1.2);
+      transition: all .5s ease-out;
+    }
+
+    &::after{
+      content: '';
+      display: block;
+      position: absolute;
+      top: 0;
+      width: inherit;
+      height: inherit;
+      transform: rotate(60deg);
+      background-color: inherit;
+
+    }
+
+    &::before{
+      content: '';
+      display: block;
+      position: absolute;
+      top: 0px;
+      width: inherit;
+      height: inherit;
+      transform: rotate(-60deg);
+      background-color: inherit;
+    }
+  }
+  .hexagono-content{
+    position: absolute;
+    z-index: 1000;
+    width: 90%;
+    margin: 0 auto;
+    left: 0;
+    right: 0;
+    top: 50%;
+    transform: translate(0, -50%);
+    text-align: center;
+    font-weight: bold;
+    line-height: 25px;
+    color: #fff;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: normal;
+    font-size: 1.3rem;
+    strong{
+      display: block;
+    }
+  }
+
+
+.img {
+    width: 300px;
+    height: auto;
+    border-radius: 50%;
+}
+
+h1,h2,h3 {
+    font-weight: 700;
+    text-transform: uppercase;
+}
+
+.nombre h1 {
+    font-size: 5em;
+    text-align: left;
+}
+
+.nombre h2 {
+    font-weight: 300;
+    letter-spacing: 0.3em;
+}
+
+.nombre {
+    border-bottom: 5px solid lightblue;
+}
+
+.contact {
+    background-color: lightblue;
+}
+
+.contact a {
+    font-size: 18px;
+    align-items: left;
+    text-align: left;
+}

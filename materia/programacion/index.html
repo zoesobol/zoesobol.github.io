@@ -32,7 +32,7 @@
   <link href="../../static/css/style.css" rel="stylesheet">
   <link href="../../static/css/blog.css" rel="stylesheet">
   <link rel="stylesheet"
-        href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/10.6.0/styles/default.min.css">
+        href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/10.6.0/styles/atom-one-dark-reasonable.min.css">
         <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/10.6.0/highlight.min.js"></script>
 
 </head>
@@ -77,45 +77,98 @@
   
               <article class="entry">
                 <h2 class="entry-title">
-                  <a href="#">Receta Lemon Pie</a>
+                  <a href="#">Ejercicio Goles</a>
                 </h2>
   
                 <div class="entry-content">
                   <pre>
                     <code class="language-javascript">let nombreJugador = 'Tevez';
-                    let golesJugador = 0;
-                    let precioEnDolares = 0;
-                    
-                    function hacerGol(){
-                        golesJugador++;
-                        precioEnDolares+=10000;
-                        console.log('GOL!!!!!!!!');
-                    }
-                    
-                    hacerGol();
-                    hacerGol();
-                    
-                    
-                    
-                    function hattrick(){
-                        for(let i = 0; i &lt; 3; i++){
-                            hacerGol();
-                        }
-                        precioEnDolares += precioEnDolares*10/100;
-                    }
-                    
-                    hattrick();
-                    
-                    function imprimirDatos(nombre, goles, precio){
-                        return `${nombre} hizo ${goles} goles y vale $${precio}`;
-                    }
-                    
-                    console.log(imprimirDatos(nombreJugador,golesJugador,precioEnDolares));</code></pre>
+let golesJugador = 0;
+let precioEnDolares = 0;
+
+function hacerGol(){
+    golesJugador++;
+    precioEnDolares+=10000;
+    console.log('GOL!!!!!!!!');
+}
+
+hacerGol();
+hacerGol();
+
+
+
+function hattrick(){
+    for(let i = 0; i &lt; 3; i++){
+        hacerGol();
+    }
+    precioEnDolares += precioEnDolares*10/100;
+}
+
+hattrick();
+
+function imprimirDatos(nombre, goles, precio){
+    return `${nombre} hizo ${goles} goles y vale $${precio}`;
+}
+
+console.log(imprimirDatos(nombreJugador,golesJugador,precioEnDolares));</code></pre>
                     
                     <p>&nbsp;</p>
                     
                 </div>
               </article><!-- End blog entry -->
+
+              <article class="entry">
+                <h2 class="entry-title">
+                  <a href="#">Ejercicio Arrays</a>
+                </h2>
+  
+                <div class="entry-content">
+                  <pre>
+                    <code class="language-javascript">let array = [1,2,3,4,5];
+let elemento = 2;
+
+let frutas = ['manzana', 'kiwi', 'pera']
+let verduras = ['lechuga', 'rucula', 'remolacha']
+let elemFrutas = 'banana'
+
+function contiene(array,elemento) {
+    if(array.indexOf(elemento) != -1) {
+        return true;
+    }else{
+        return false;
+    }
+
+}
+
+console.log(contiene(array,elemento));
+console.log(contiene(frutas,elemFrutas));
+
+function trasladarUltimoElemento(array1,array2) {
+    if(array1[0] !== undefined) {
+        let elementoArray1 = array1.pop();
+        array2.push(elementoArray1);
+        return array2;
+    } else {
+        return "No se puede mover algo de un array vacío"
+    }
+    
+}
+
+let array1 = [];
+let array2 = [1,2,3];
+
+console.log(array1)
+
+console.log(trasladarUltimoElemento(array1,array2))
+console.log(trasladarUltimoElemento(frutas,verduras))</code></pre>
+                    
+                    <p>&nbsp;</p>
+                    
+                </div>
+              </article><!-- End blog entry -->
+
+
+
 
             </div><!-- End blog entries list -->
 
@@ -150,6 +203,7 @@
 
   <!-- Template Main JS File -->
   <script src="../../static/js/main.js"></script>
+  <script>hljs.highlightAll();</script>
 
 </body>
 
