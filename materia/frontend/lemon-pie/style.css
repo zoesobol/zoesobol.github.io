@@ -1,0 +1,42 @@
+body {
+    background-color: #353535;
+}
+
+.banner {
+    background-image: url(lemon-pie2.jpg);
+    background-size: cover;
+    height: 345px;
+    position: relative;
+    
+}
+
+.titulo {
+    position: absolute;
+    bottom: 0;
+    text-align: center;
+    color: white;
+    margin-bottom: 10px;
+}
+
+.titulo p {
+    font-style: italic;
+    font-family: 'Playfair Display', serif;
+}
+
+.titulo h1 {
+    font-family: 'Courgette', cursive;
+    font-size: 3em;
+}
+
+.texto {
+    background-color: #4e4e4e;
+    color: #eee;
+    padding: 2em;
+    font-size: 18px;
+}
+
+.texto h2 {
+    font-family: 'Cabin', sans-serif;
+    font-weight: 600;
+    font-size: 30px;
+}
