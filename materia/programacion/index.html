@@ -259,6 +259,54 @@ fizzBuzz(2,3, 'Fizz', 'Buzz');
                 </div>
               </article><!-- End blog entry -->
 
+              <article class="entry">
+                <h2 class="entry-title">
+                  <a href="#">Ejercicio FizzBuzz</a>
+                </h2>
+  
+                <div class="entry-content">
+                  <pre>
+                    <code class="language-javascript">
+let clavadosParticipanteA = [5,8,4,9,5]
+let clavadosParticipanteB = [8,7,8,6,8]
+
+let puntajePorPromedio = array => {
+    let suma = 0;
+    for(let i=0; i < array.length; i++) {
+        suma += array[i];
+    }
+    let promedio = suma / array.length;
+    return promedio;
+}
+
+let puntajePorMayor = array => {
+    let puntajeMayor = 0;
+    for(let i=0; i < array.length; i++) {
+        if (array[i] > puntajeMayor) {
+            puntajeMayor = array[i]
+        }
+    } return puntajeMayor;
+}
+
+function competencia(resultadoA,resultadoB,calcularPuntaje) {
+    let puntajeA = calcularPuntaje(resultadoA);
+    let puntajeB = calcularPuntaje(resultadoB);
+    if (puntajeA > puntajeB) {
+        return 'Ganó A!!!'
+    } else {
+        return 'Ganó B!!!'
+    }
+}
+
+console.log(competencia(clavadosParticipanteA,clavadosParticipanteB,puntajePorPromedio))
+console.log(competencia(clavadosParticipanteA,clavadosParticipanteB,puntajePorMayor))
+                    </code></pre>
+                    
+                    <p>&nbsp;</p>
+                    
+                </div>
+              </article><!-- End blog entry -->
+
 
             </div><!-- End blog entries list -->
 
