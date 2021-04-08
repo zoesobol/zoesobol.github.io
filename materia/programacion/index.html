@@ -168,6 +168,96 @@ console.log(trasladarUltimoElemento(frutas,verduras))</code></pre>
               </article><!-- End blog entry -->
 
 
+              <article class="entry">
+                <h2 class="entry-title">
+                  <a href="#">Ejercicio Arrays</a>
+                </h2>
+  
+                <div class="entry-content">
+                  <pre>
+                    <code class="language-javascript">
+let films = ['star wars', 'totoro', 'rocky', 'pulp fiction', 'la vida es bella'];
+
+let cartoon = ['toy story', 'finding nemo', 'kung-fu panda', 'wall-e', 'fortnite'];
+
+const asiaScores = [8, 10, 6, 9, 10, 6, 6, 8];
+const euroScores = [8, 10, 6, 8, 10, 6, 7, 9];
+
+
+function filmsToUppercase(array) {
+    for(let i = 0; i < array.length; i++) {
+        array[i] = array[i].toUpperCase();
+    }
+    return array;
+}
+
+films = filmsToUppercase(films);
+
+function trasladarElementos(arrayUno, arrayDos) {
+    for(let i= 0; i < arrayUno.length; i++){
+        if (arrayUno.length >= 0) {
+            let trasladar = arrayUno.pop();
+            arrayDos.push(trasladar);
+        } else {
+            console.log("El array está vacío");
+        }
+    }
+    return arrayDos;
+}
+
+trasladarElementos(cartoon,films);
+console.log(cartoon);
+console.log(films);
+
+
+function comparar(arrayUno, arrayDos) {
+    for(let i = 0; i < ArrayUno.length; i++) {
+        if (arrayUno[i] === arrayDos[i]) {
+            console.log("Son iguales");
+        } else {
+            console.log("Son diferentes");
+        }
+    }
+    
+}
+
+comparar(euroScores,asiaScores)
+                    </code></pre>
+                    
+                    <p>&nbsp;</p>
+                    
+                </div>
+              </article><!-- End blog entry -->
+
+              <article class="entry">
+                <h2 class="entry-title">
+                  <a href="#">Ejercicio FizzBuzz</a>
+                </h2>
+  
+                <div class="entry-content">
+                  <pre>
+                    <code class="language-javascript">
+let fizzBuzz = (num1,num2, palabra1, palabra2) => {
+    for(let i = 1; i<=100; i++) {
+        if(i % num1 === 0 && i % num2 === 0) {
+            console.log(palabra1+palabra2);
+        } else if (i % num1 === 0) {
+            console.log(palabra1);
+        } else if (i % num2 === 0) {
+            console.log(palabra2);
+        } else {
+            console.log(i);
+        }
+    }
+}
+
+fizzBuzz(2,3, 'Fizz', 'Buzz');
+                    </code></pre>
+                    
+                    <p>&nbsp;</p>
+                    
+                </div>
+              </article><!-- End blog entry -->
 
 
             </div><!-- End blog entries list -->
