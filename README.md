@@ -2,7 +2,7 @@
 Github Pages te permite tener una página web a partir de un repo de Github, completamente gratis! Y con muy poco esfuerzo.
 ## 
 # Cómo empiezo?
-## Crear una en github
+## Crear una cuenta en github
 paso medio obvio
 
 ## Crear un repo
