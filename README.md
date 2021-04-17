@@ -57,7 +57,7 @@ Acordate que si vas a la carpeta, y ésta tiene un index.html, eso es lo que se 
 
 Siguiendo el ejemplo anterior, si ponés un link así, ya es suficiente!
 ```HTML
-<a href="frontend/">Frontend</a>
+<a href="materia/frontend/">Frontend</a>
 ```
 
 Y para referenciar a la página principal es tan fácil como poner esto
