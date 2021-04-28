@@ -1,23 +1,21 @@
-
-
-
 .descuento {
-    background-color: rgb(0, 199, 199);
+    background-color: #1CD1B0;
 }
 
 .descuento p {
     margin:0;
+    padding: 5px;
 }
 
 
 .titulo {
-    background-color: rgb(0, 107, 207);
+    background-color: #00669F;
     color: #fff;
     padding: 10px;
 }
 
 .navegacion {
-    background-color: black;
+    background-color: #001D2D;
     text-align: right;
     padding: 10px;
     margin-bottom: 10px;
@@ -29,10 +27,15 @@
 }
 
 .principal {
-    background-color: #fff;
     align-items: center;
-    padding-bottom: 60px;
+    padding: 60px 300px;
 
+}
+
+@media (max-width:1024px) {
+    .principal {
+        padding: 60px 0px;
+    }
 }
 
 .perfil {
@@ -41,43 +44,40 @@
     width:100px;
     height:100px;
     position: absolute;
-    top:25%;
-    left: 5.5em;
+    top:35%;
+    left: 30%;
     object-fit: cover;
 }
 
 .card, .card-img-top {
     border-top-left-radius: 30px;
     border-top-right-radius: 30px;
-    margin-left: auto;
-    margin-right: auto;
 }
 
 .card-body {
     margin-top: 40px;
+    width: 400px;
 }
 
 .nombre {
     text-align: center;
+    text-transform: uppercase;
 }
 
 .card-text {
-    text-align: justify;
+    text-align: center;
 }
 
 .btn-primary {
-    background-color: rgb(0, 107, 207);
-    border: 1px solid rgb(0, 107, 207);
+    background-color: #00669F;
+    border: 1px solid #00669F;
     position: relative;
-    left: 21%;
+    left: 15%;
+    right: 10%;
     padding-left: 40px;
     padding-right: 40px;
 }
 
-
-.login {
-    padding: 15vh 50vh;
-}
 
 .login h3 {
     font-size: 48px;
@@ -90,22 +90,22 @@
     padding: 10px;
 }
 
-.form-control {
+.login-form {
     margin: 20px 0px;
     border: 2px solid black;
 }
 
 .btn-login {
-    background-color:rgb(0, 199, 199);
-    border: 1px solid rgb(0, 199, 199);
+    background-color:#1CD1B0;
+    border: 1px solid #1CD1B0;
     border-radius: 50px;
     width: 100%;
     font-weight: bold;
 }
 
 .btn-register {
-    background-color:rgb(0, 199, 199);
-    border: 1px solid rgb(0, 199, 199);
+    background-color:#1CD1B0;
+    border: 1px solid #1CD1B0;
     border-radius: 50px;
     width: 49%;
     font-weight: bold;
@@ -127,7 +127,6 @@
     
 }
 
-
 #footer {
     padding-top: 10px;
     color: #f4f6fd;
@@ -137,7 +136,7 @@
     bottom: 0;
     width: 100%;
     z-index: 9999;
-    background: rgb(0, 107, 207);
+    background: #00669F;
 }
 
 #footer p {
@@ -152,7 +151,24 @@
 }
 
 
-.batman-details {
-    background-image: url('img/bg-batman.jpg');
-    backgr;
+.agregar-form {
+    background: #00669F;
+    align-items: center;
+    justify-content: space-between;
+    border-radius: 50px;
+    padding: 20px;
+    margin-bottom: 5em;
+    color: white;
 }
+
+.titulo-agregar {
+    font-size: 48px;
+    font-weight: bold;
+    margin-bottom: 40px;
+    color: white;
+    text-align: center;
+}
+
+.django-ckeditor-widget{
+    width: 100%;
+  }
