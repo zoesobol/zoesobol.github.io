@@ -132,7 +132,7 @@ nav ul li a:hover::before{
     border-bottom: 10px solid rgb(202, 66, 129);
     border-left: 10px solid rgba(66,139,202,.2);
     -webkit-animation: animate-spinner 1s linear infinite;
-  animation: animate-spinner 1s linear infinite;
+    animation: animate-spinner 1s linear infinite;
 
  }
 
