@@ -8,6 +8,16 @@ body {
     align-items: center;
 }
 
+.nav-menu {
+    display: none;
+    position: fixed;
+    right: 25px;
+    top: 25px;
+    z-index:20;
+    font-size: 50px;
+    color:#fff;
+}
+
 header {
     background-color: #2F1793;
     display: flex;
@@ -125,6 +135,10 @@ nav ul li a:hover::before{
     }
     nav li a {
         visibility: hidden;
+    }
+    .nav-menu {
+        display: inline-flex;
+
     }
 }
 

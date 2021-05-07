@@ -1,0 +1,25 @@
+.titulo-login {
+    font-size: 3em;
+}
+
+.login {
+    background-color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 500px;
+    width: 100vw;
+    margin-top: 200px;
+    display: flex;
+    flex-direction: column;
+}
+
+.formulario {
+    display: flex;
+    flex-direction: column;
+}
+
+.btn-login {
+    display: flex;
+    align-items: center;
+}

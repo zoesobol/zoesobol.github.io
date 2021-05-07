@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Ejercitación</title>
     <link href="style.css" rel="stylesheet">
+    <link href="login.css" rel="stylesheet">
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">  
     <link href="../../../static/vendor/icofont/icofont.min.css" rel="stylesheet">   
@@ -31,28 +32,16 @@
         </div>
     </header>
     <main>
-        <div class="cards">
-            <div class="card">
-                <i class="icofont-heart"></i>
-                <p><small>Hace 5 horas</small></p>
-                <h2>Card 1</h2>
-                <p>Ad Lorem Ipsum</p>
-                <p><span>Buenos Aires, Argentina</span></p>
-            </div>
-            <div class="card">
-                <i class="icofont-heart"></i>
-                <p><small>Hace 5 horas</small></p>
-                <h2>Card 2</h2>
-                <p>Ad Lorem Ipsum</p>
-                <p><span>Buenos Aires, Argentina</span></p>
-            </div>
-            <div class="card">
-                <i class="icofont-heart"></i>
-                <p><small>Hace 5 horas</small></p>
-                <h2>Card 3</h2>
-                <p>Ad Lorem Ipsum</p>
-                <p><span>Buenos Aires, Argentina</span></p>
-            </div>
+        <div class="login">
+            <h3 class="titulo-login">Login</h3>
+            <form action="index.html" method="GET">
+                <div class="formulario">
+                    <input type="text" class="form" placeholder="Usuario">
+                    <input type="password" class="form" placeholder="Contraseña">
+                </div>
+                <button type="submit" class="btn-login">Entrar</button>
+            </form>
+            <p>¿No tienes una cuenta? <a href="register.html">Registrarme</a></p>
         </div>
     </main>
     <footer>
