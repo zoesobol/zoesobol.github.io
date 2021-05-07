@@ -137,8 +137,72 @@ let inmobiliaria = {
                 </div>
               </article><!-- End blog entry -->
 
+              <article id="final" class="entry">
+                <h2 class="entry-title">
+                  <a href="#final">Final(ly)</a>
+                </h2>
+  
+                <div class="entry-content">
+                  <pre>
+                    <code class="language-javascript">
+const fs = require('fs');
 
- 
+let autosJson = fs.readFileSync('AUTOS.json');
+
+let autos = JSON.parse(autosJson);
+
+//console.log(autos)
+
+let carrera = {
+    autos:autos,
+    autosPorTanda:5,
+    autosHabilitados: function() {
+        return this.autos.filter(auto => !auto.sancionado);
+    },
+    listarAutos: function() {
+        this.autos.forEach(auto => {
+            if(auto.sancionado) {
+                console.log(`Piloto: ${auto.piloto}, Patente: ${auto.patente}, peso en kg: ${auto.peso}, estado: sancionado`);
+            } else {
+                console.log(`Piloto: ${auto.piloto}, Patente: ${auto.patente}, peso en kg: ${auto.peso}, estado: puede correr`);
+            }
+        })
+    },
+    buscarPorPiloto: function(piloto) {
+        return this.autos.find(auto => piloto === auto.piloto);
+    },
+    buscarPorAceleracion: function(aceleracion) {
+        let autosHabilitados = this.autosHabilitados();
+        return autosHabilitados.filter(auto => auto.aceleracion >= aceleracion);
+    },
+    ordenarPorAngulo: function() {
+        let arrayOrdenado = this.autos.sort((autoA, autoB) => 
+            (autoA.anguloDeGiro > autoB.anguloDeGiro) ? 1 : -1);
+        return arrayOrdenado;
+    },
+    generarTanda: function(cilindrada,peso) {
+        let autosHabilitados = this.autosHabilitados();
+        let autosQueCumplenLasCondiciones = autosHabilitados.filter(auto => auto.cilindrada <= cilindrada && auto.peso <= peso);
+        return autosQueCumplenLasCondiciones.slice(0,this.autosPorTanda);
+    },
+    calcularPodio: function(cilindrada,peso) {
+        let podio = this.generarTanda(cilindrada,peso)
+        podio.sort((autoA, autoB) => 
+            (autoA.puntaje > autoB.puntaje) ? 1 : -1);
+        podio.reverse();
+        console.log(`EL GANADOR ES ${podio[0].piloto}, con un puntaje de ${podio[0].puntaje}`);
+        console.log(`El segundo puesto es para ${podio[1].piloto}, con un puntaje de ${podio[1].puntaje}`);
+        console.log(`Y el tercer puesto es para ${podio[2].piloto}, con un puntaje de ${podio[2].puntaje}`)
+    }
+}
+
+                    
+ </code></pre>
+                    
+                    <p>&nbsp;</p>
+                    
+                </div>
+              </article><!-- End blog entry -->
 
             </div><!-- End blog entries list -->
 
